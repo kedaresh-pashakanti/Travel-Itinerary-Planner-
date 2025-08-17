@@ -1,0 +1,5 @@
+streamlit
+requests
+reportlab
+langchain
+langchain-groq
