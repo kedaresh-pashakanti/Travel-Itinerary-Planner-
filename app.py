@@ -24,9 +24,9 @@ st.set_page_config(
     layout="wide",
 )
 
- api_key = st.secrets["GROQ_API_KEY"]
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 if not GROQ_API_KEY:
-    st.error("❌ GROQ_API_KEY missing. Create a .env with GROQ_API_KEY=your_key_here")
+    st.error("❌ GROQ_API_KEY missing. Please set it in Streamlit Secrets.")
     st.stop()
 
 # Global CSS
