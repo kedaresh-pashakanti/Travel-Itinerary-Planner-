@@ -6,7 +6,7 @@ from typing import List, Dict, Tuple
 
 import requests
 import streamlit as st
-from dotenv import load_dotenv
+
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import cm
@@ -24,8 +24,7 @@ st.set_page_config(
     layout="wide",
 )
 
-load_dotenv()
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+ api_key = st.secrets["GROQ_API_KEY"]
 if not GROQ_API_KEY:
     st.error("❌ GROQ_API_KEY missing. Create a .env with GROQ_API_KEY=your_key_here")
     st.stop()
